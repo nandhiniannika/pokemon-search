@@ -1,38 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f8fc;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  background-color: #ef5350;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar input, .search-bar select {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pokemon-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.type {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  background-color: #eee;
+}
+
+/* Type Colors */
+.fire { background-color: #fd7d24; color: white; }
+.water { background-color: #4592c4; color: white; }
+.grass { background-color: #9bcc50; color: white; }
+.electric { background-color: #eed535; color: black; }
+.psychic { background-color: #f366b9; color: white; }
+.normal { background-color: #a4acaf; color: white; }
+.bug { background-color: #729f3f; color: white; }
+.poison { background-color: #b97fc9; color: white; }
+.ground { background-color: #ab9842; color: white; }
+.fairy { background-color: #fdb9e9; color: black; }
+.fighting { background-color: #d56723; color: white; }
+.rock { background-color: #a38c21; color: white; }
+.ghost { background-color: #7b62a3; color: white; }
+.dragon { background-color: #53a4cf; color: white; }
+.ice { background-color: #51c4e7; color: white; }
+.dark { background-color: #707070; color: white; }
+.steel { background-color: #9eb7b8; color: white; }
+.flying { background-color: #3dc7ef; color: white; }
+
+.status-text {
+  margin-top: 50px;
+  color: gray;
 }
